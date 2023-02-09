@@ -57,7 +57,7 @@ hist(h_2)
 
 # Datos aleatorios
 # para que me genere datos random
-?norm  
+
 
 # algorito para que siempre me genere los mismos números, el numero en (  ) puede ser cualquiera
 set.seed(13)
@@ -110,7 +110,6 @@ if.50 <= median(if.50)
 
 # submuestreo dirigido
 
-?subset
 dbh.50 <- subset(if.50, if.50 <= median(if.50))
 
 dbh.up50 <- subset(if.50, if.50 >= median(if.50))
@@ -138,3 +137,4 @@ boxplot(fert$IE ~ fert$Tratamiento,
         xlab = "Tratamiento", ylab = "Indice de Esbeltez",
         col = c("red", "blue"),
         las = 1, ylim = c(0.4, 1.2))
+
