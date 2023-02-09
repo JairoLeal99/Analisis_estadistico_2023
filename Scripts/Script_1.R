@@ -126,3 +126,15 @@ sd(dbh.up30)
 # Importar datos ----------------------------------------------------------
 
 fert <- read.csv("vivero.csv", header = TRUE)
+
+# mis datos no se exportaron como un factor, por lo cual no lo toma como grupos diferentes, siguiente comando para hacerlo
+
+fert$Tratamiento <-as.factor(fert$Tratamiento)
+
+# ~ en función de...
+
+boxplot(fert$IE ~ fert$Tratamiento, 
+        main = "Vivero Bosque Escuela",
+        xlab = "Tratamiento", ylab = "Indice de Esbeltez",
+        col = c("red", "blue"),
+        las = 1, ylim = c(0.4, 1.2))
