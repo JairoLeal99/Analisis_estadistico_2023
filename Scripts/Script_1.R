@@ -24,6 +24,10 @@ h_2 <- c(5, 3, 2.4, 3, 4.7, 5.8, 7, 11, 2.4, 7.2)
 
 dbh_2 * h_2
 
+
+
+# Graficas ----------------------------------------------------------------
+
 # Medidas de tendencia central
 # Media, moda
 
@@ -49,7 +53,7 @@ plot(dbh_2, h_2, col= "red")
 hist(dbh_2)
 hist(h_2)
 
-# Ejercicio
+
 
 # Datos aleatorios
 # para que me genere datos random
@@ -78,3 +82,47 @@ hist(if.1000)
 set.seed(1)
 stem(if.50)
 hist(if.50)
+
+
+
+# Restricciones -----------------------------------------------------------
+
+# Trabajar con datos del objeto if.50
+
+mean(if.50)
+fivenum(if.50)
+boxplot(if.50)
+
+# mean= media   ;   fivenum= 5 datos del boxplot, rangos, limites de cuartiles y mediana
+
+# SIMBOLOS DE RESTRICCIONES DE DATOS
+
+# igual a ==
+# diferente a !=
+# igual o mayor >=
+# igual o menor <=
+# mayor que >
+# menor que <
+
+if.50 <= median(if.50)
+
+# dice que datos cumplen la restricción... instruccion lógica
+
+# submuestreo dirigido
+
+?subset
+dbh.50 <- subset(if.50, if.50 <= median(if.50))
+
+dbh.up50 <- subset(if.50, if.50 >= median(if.50))
+
+dbh.up30 <- subset(if.50, if.50 > 30)
+dbh.up30
+
+mean(dbh.up30)
+sd(dbh.up30)
+
+
+
+# Importar datos ----------------------------------------------------------
+
+fert <- read.csv("vivero.csv", header = TRUE)
