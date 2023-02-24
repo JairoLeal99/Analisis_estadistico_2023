@@ -1,0 +1,436 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Script\_1.R},
+  pdfauthor={jairo},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Script\_1.R}
+\author{jairo}
+\date{2023-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Jairo Alberto Leal Gómez}
+\CommentTok{\# 09/02/2023}
+\CommentTok{\# Características descriptivas}
+
+
+\CommentTok{\# Primera sesión {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{dbh }\OtherTok{\textless{}{-}} \DecValTok{15}
+\NormalTok{h }\OtherTok{\textless{}{-}} \DecValTok{8}
+
+\CommentTok{\# Multiplicación y operaciones}
+
+\NormalTok{dbh }\SpecialCharTok{*}\NormalTok{ h}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 120
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dbh}\SpecialCharTok{\^{}}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 225
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{log}\NormalTok{(dbh)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.70805
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dbh\_2 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{12}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{16}\NormalTok{) }
+
+\NormalTok{dbh\_2 }\SpecialCharTok{*}\NormalTok{ h}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  96  64  56  40  88 104 128 168  64 128
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h\_2 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\FloatTok{2.4}\NormalTok{, }\DecValTok{3}\NormalTok{, }\FloatTok{4.7}\NormalTok{, }\FloatTok{5.8}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{11}\NormalTok{, }\FloatTok{2.4}\NormalTok{, }\FloatTok{7.2}\NormalTok{)}
+
+\NormalTok{dbh\_2 }\SpecialCharTok{*}\NormalTok{ h\_2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  60.0  24.0  16.8  15.0  51.7  75.4 112.0 231.0  19.2 115.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Graficas {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\CommentTok{\# Medidas de tendencia central}
+\CommentTok{\# Media, moda}
+
+\CommentTok{\# Medidas de dispersión}
+\CommentTok{\# Varianza, desviación estandar, etc.}
+
+\CommentTok{\# Representación gráfica de los datos}
+\CommentTok{\# Histogramas, distribución de un solo grupo en un rango}
+\CommentTok{\# Gráfica de barras, grupos }
+\CommentTok{\# Dispersión}
+\CommentTok{\# Boxplot, gráfica de cajas}
+
+\FunctionTok{boxplot}\NormalTok{(dbh\_2, }\AttributeTok{col=} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Boxplot DBH\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Limites mínimo y máximo, centro representa la mediana, 50\% de los datos en la caja, y cada uno es un cuartil (25, 50, 75, 100)}
+
+\FunctionTok{boxplot}\NormalTok{(h\_2, }\AttributeTok{col=} \StringTok{\textquotesingle{}green\textquotesingle{}}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Boxplot h\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(dbh\_2, h\_2, }\AttributeTok{col=} \StringTok{"red"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Correlación: asociación positiva}
+
+\FunctionTok{hist}\NormalTok{(dbh\_2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(h\_2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Datos aleatorios}
+\CommentTok{\# para que me genere datos random}
+
+
+\CommentTok{\# algorito para que siempre me genere los mismos números, el numero en (  ) puede ser cualquiera}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{13}\NormalTok{)}
+\NormalTok{obs}\FloatTok{.50} \OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{50}\NormalTok{, }\AttributeTok{mean=} \DecValTok{3}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(obs}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-6.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{13}\NormalTok{)}
+\NormalTok{if}\FloatTok{.50} \OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{50}\NormalTok{, }\AttributeTok{min =} \DecValTok{10}\NormalTok{, }\AttributeTok{max =} \DecValTok{40}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-7.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{13}\NormalTok{)}
+\NormalTok{if}\FloatTok{.100} \OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{100}\NormalTok{, }\AttributeTok{min =} \DecValTok{10}\NormalTok{, }\AttributeTok{max =} \DecValTok{40}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(if}\FloatTok{.100}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-8.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{if}\FloatTok{.500} \OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{500}\NormalTok{, }\AttributeTok{min =} \DecValTok{10}\NormalTok{, }\AttributeTok{max =} \DecValTok{40}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(if}\FloatTok{.500}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-9.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{if}\FloatTok{.1000} \OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{1000}\NormalTok{, }\AttributeTok{min =} \DecValTok{10}\NormalTok{, }\AttributeTok{max =} \DecValTok{40}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(if}\FloatTok{.1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-10.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\FunctionTok{stem}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##   The decimal point is 1 digit(s) to the right of the |
+## 
+##   1 | 0112333344
+##   1 | 77
+##   2 | 001122344
+##   2 | 666778888999
+##   3 | 000012334
+##   3 | 66678899
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-11.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Restricciones {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\CommentTok{\# Trabajar con datos del objeto if.50}
+
+\FunctionTok{mean}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 25.3432
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{fivenum}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10.32800 19.87381 27.10863 31.30967 39.00500
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-12.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# mean= media   ;   fivenum= 5 datos del boxplot, rangos, limites de cuartiles y mediana}
+
+\CommentTok{\# SIMBOLOS DE RESTRICCIONES DE DATOS}
+
+\CommentTok{\# igual a ==}
+\CommentTok{\# diferente a !=}
+\CommentTok{\# igual o mayor \textgreater{}=}
+\CommentTok{\# igual o menor \textless{}=}
+\CommentTok{\# mayor que \textgreater{}}
+\CommentTok{\# menor que \textless{}}
+
+\NormalTok{if}\FloatTok{.50} \SpecialCharTok{\textless{}=} \FunctionTok{median}\NormalTok{(if}\FloatTok{.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE
+## [13] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE
+## [25]  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE
+## [37]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE
+## [49] FALSE FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# dice que datos cumplen la restricción... instruccion lógica}
+
+\CommentTok{\# submuestreo dirigido}
+
+\NormalTok{dbh}\FloatTok{.50} \OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(if}\FloatTok{.50}\NormalTok{, if}\FloatTok{.50} \SpecialCharTok{\textless{}=} \FunctionTok{median}\NormalTok{(if}\FloatTok{.50}\NormalTok{))}
+
+\NormalTok{dbh.up50 }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(if}\FloatTok{.50}\NormalTok{, if}\FloatTok{.50} \SpecialCharTok{\textgreater{}=} \FunctionTok{median}\NormalTok{(if}\FloatTok{.50}\NormalTok{))}
+
+\NormalTok{dbh.up30 }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(if}\FloatTok{.50}\NormalTok{, if}\FloatTok{.50} \SpecialCharTok{\textgreater{}} \DecValTok{30}\NormalTok{)}
+\NormalTok{dbh.up30}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 31.30967 38.86194 32.93194 36.20147 36.35113 36.71677 35.96354 30.41571
+##  [9] 30.33739 37.56123 34.26281 32.76192 39.00500 37.56994 31.97295 30.41875
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(dbh.up30)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 34.54013
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{(dbh.up30)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.100909
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Importar datos {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{fert }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"vivero.csv"}\NormalTok{, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{)}
+
+\CommentTok{\# mis datos no se exportaron como un factor, por lo cual no lo toma como grupos diferentes, siguiente comando para hacerlo}
+
+\NormalTok{fert}\SpecialCharTok{$}\NormalTok{Tratamiento }\OtherTok{\textless{}{-}}\FunctionTok{as.factor}\NormalTok{(fert}\SpecialCharTok{$}\NormalTok{Tratamiento)}
+
+\CommentTok{\# \textasciitilde{} en función de...}
+
+\FunctionTok{boxplot}\NormalTok{(fert}\SpecialCharTok{$}\NormalTok{IE }\SpecialCharTok{\textasciitilde{}}\NormalTok{ fert}\SpecialCharTok{$}\NormalTok{Tratamiento, }
+        \AttributeTok{main =} \StringTok{"Vivero Bosque Escuela"}\NormalTok{,}
+        \AttributeTok{xlab =} \StringTok{"Tratamiento"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Indice de Esbeltez"}\NormalTok{,}
+        \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"blue"}\NormalTok{),}
+        \AttributeTok{las =} \DecValTok{1}\NormalTok{, }\AttributeTok{ylim =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.4}\NormalTok{, }\FloatTok{1.2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Script_1_files/figure-latex/unnamed-chunk-1-13.pdf}
+
+\end{document}
