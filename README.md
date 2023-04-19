@@ -1,7 +1,7 @@
 # Ing. Jairo Alberto Leal Gómez
-# Producto Integrador del Aprendizaje
-# Curso: Analisis estadistico 2023
-# Desarrollo del curso
+## PIA: Repositorio de GitHub
+## Curso: Analisis estadistico 2023
+## Desarrollo del curso
 
 Repositorio para guardar mis códigos del curso de análisis estadístico MCF 2023 (enero - junio)
 
@@ -15,7 +15,7 @@ Repositorio para guardar mis códigos del curso de análisis estadístico MCF 20
 - Clase 8: Examen practico en RStudio
 
 Carpetas incluidas en este repositorio:
-1.- Scripts --> creados en diferentes clases
-2.- Tareas --> scripts de R y compilaciones en PDF
-3.- Laboratorios --> scripts de R y compilaciones en PDF
-4.- Examen --> script de R y compilación en PDF
+- 1.- Scripts --> creados en diferentes clases
+- 2.- Tareas --> scripts de R y compilaciones en PDF
+- 3.- Laboratorios --> scripts de R y compilaciones en PDF
+- 4.- Examen --> script de R y compilación en PDF
