@@ -38,3 +38,8 @@ Carpetas incluidas en este repositorio:
 - 2.- Tareas --> scripts de R y compilaciones en PDF
 - 3.- Laboratorios --> scripts de R y compilaciones en PDF
 - 4.- Examen --> script de R y compilación en PDF
+
+## Contribucion a mi repositorio a lo largo del curso
+
+![image](https://user-images.githubusercontent.com/123662421/233183230-03b037a4-4493-4940-a0b5-a592fa3f4663.png)
+
